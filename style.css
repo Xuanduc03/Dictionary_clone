@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #4D59FB;
+}
+.wrapper {
+    width: 450px;
+    background: #fff;
+    padding: 25px 20px 18px;
+    border-radius: 7px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.wrapper header {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper .search {
+    position: relative;
+    margin: 20px 0 18px;
+}
+.wrapper .search input {
+    width: 100%;
+    height: 54px;
+    outline: none;
+    border-radius: 6px;
+    font-size: 18px;
+    border: 1px solid #999;
+    padding-left: 36px;
+}
+.wrapper .search input:focus {
+    padding: 0 41px;
+    border: 2px solid #4D59FB;
+}
+.wrapper .search input::placeholder{
+    color: #8b8b8b;
+}
+.search :where(i, span){
+    position: absolute;
+    top: 50%;
+    color :#999;
+    transform: translateY(-50%);
+}
+.search i {
+    left : 15px;
+    pointer-events: none;
+    font-size: 16px;
+}
+.search input:focus ~ i {
+    color: #4D59FB;
+}
+.search span {
+    right: 18px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.search span:active {
+    color : #333;
+}
+.search input:valid ~ span {
+    display: block;
+}
+.wrapper ul li {
+    display: flex;
+    list-style: none;
+    margin-bottom: 14px;
+    padding-bottom: 17px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #999;
+}
+.wrapper ul li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom:  0;
+}
+.wrapper .text-info {
+    padding: 5px 0 6px;
+    color: #8b8b8b;
+    margin-left: 5px;
+    font-size: 17px;
+}
+.text-info span{
+    color: rgb(15, 151, 230);
+    font-weight: 500;
+}
+.wrapper.active .text-info{
+    display: none;
+}
+.wrapper ul {
+    height: 0;
+    opacity: 0;
+    padding-right: 1px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+.wrapper.active ul {
+    opacity: 1;
+    height: 330px;
+}
+.word p{
+    font-size: 25px;
+    font-weight: 500;
+    color :rgb(231, 24, 24)
+}
+.word span {
+    color :#8b8b8b;
+}
+ul .word i {
+    color: #999;
+    font-size: 15px;
+    cursor: pointer;
+}
+ul .content {
+    max-height: 220px;
+    overflow-y: auto;
+}
+ul .content::-webkit-scrollbar {
+   width: 0px;
+}
+.content .detail{
+    border-left : 2px solid #66c916;
+    border-radius: 6px;
+    padding-left: 8px;
+}
+.content .meaning p {
+    font-size: 20px;
+    font-weight: 500;
+}
+.content .meaning span {
+    color: #8b8b8b;
+}
+.content .example p {
+    font-size: 20px;
+    font-weight: 500;
+}
+.content .example span {
+    color: #8b8b8b;
+}
+.content .synonyms .detail {
+    margin-bottom: 10px;
+}
+.content .synonyms p {
+    font-size: 20px;
+    font-weight: 500;
+}
+.content .synonyms .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .synonyms span {
+    color: #8b8b8b;
+    margin-right: 5px;
+    cursor: pointer;
+    text-decoration: underline;
+}
